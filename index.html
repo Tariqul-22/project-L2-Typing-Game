@@ -1,11 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Typing Game</title>
+    <!-- daisy ui & tailwind -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- style .css -->
+    <link rel="stylesheet" href="./styles/style.css">
 </head>
-<body>
-    
+
+<body class="bg-slate-900 min-h-screen poppins ">
+
+    <main class="container mx-auto bg-[url('./images/background.png')] mi bg-no-repeat bg-center min-h-screen">
+        <!-- ====================section 01 ================== -->
+        <section id="home" class=" flex flex-col items-center justify-center h-screen ">
+            <h3 class="anton xl:text-[170px] lg:text-9xl md:text-8xl text-6xl text-white text-center">Typing Practice</h3>
+            <p class="text-white md:text-xl poppins mt-10">Enjoy the game and improve your skill</p>
+            
+            <button class="mt-16 h-14 w-36 bg-white rounded-2xl hover:bg-orange-500 text-zinc-950 text-xl font-bold ">Play Now</button>
+            
+
+        </section>
+
+        <!-- ===============section 02 =============== -->
+        <section id="play-ground" class="hidden pt-20 space-y-14">
+            <div class="border-[20px] border-solid border-gray-800 bg-opacity-70 backdrop-filter backdrop-blur-lg bg-white w-10/12 h-60 lg:h-80 xl:h-[400px] mx-auto rounded-2xl flex items-center justify-center">
+                <p class="text-7xl lg:text-8xl xl:text-9xl font-bold text-red-700">Y</p>
+            </div>
+            <div>
+                <div class="flex justify-center gap-1 lg:gap-2 my-1 lg:my-2 w-full">
+                    <kbd class="kbd">q</kbd>
+                    <kbd class="kbd">w</kbd>
+                    <kbd class="kbd">e</kbd>
+                    <kbd class="kbd">r</kbd>
+                    <kbd class="kbd">t</kbd>
+                    <kbd class="kbd">y</kbd>
+                    <kbd class="kbd">u</kbd>
+                    <kbd class="kbd">i</kbd>
+                    <kbd class="kbd">o</kbd>
+                    <kbd class="kbd">p</kbd>
+                </div> 
+                <div class="flex justify-center gap-1 lg:gap-2 my-1 lg:my-2 w-full">
+                    <kbd class="kbd">a</kbd>
+                    <kbd class="kbd">s</kbd>
+                    <kbd class="kbd">d</kbd>
+                    <kbd class="kbd">f</kbd>
+                    <kbd class="kbd">g</kbd>
+                    <kbd class="kbd">h</kbd>
+                    <kbd class="kbd">j</kbd>
+                    <kbd class="kbd">k</kbd>
+                    <kbd class="kbd">l</kbd>
+                </div> 
+                <div class="flex justify-center gap-1 lg:gap-2 my-1 lg:my-2 w-full">
+                    <kbd class="kbd">z</kbd>
+                    <kbd class="kbd">x</kbd>
+                    <kbd class="kbd">c</kbd>
+                    <kbd class="kbd">v</kbd>
+                    <kbd class="kbd">b</kbd>
+                    <kbd class="kbd">n</kbd>
+                    <kbd class="kbd">m</kbd>
+                    <kbd class="kbd">/</kbd>
+                </div>
+            </div>
+
+            <div class="flex justify-between w-10/12 mx-auto">
+                <div class="flex items-center justify-center bg-purple-700 h-14 w-36 rounded-[30px] text-white text-2xl space-x-2">
+                    <p>Life</p>
+                    <img src="./images/Vector.png" alt="">
+                    <span>10</span>
+                </div>
+
+                <div class="flex items-center justify-center bg-green-500 h-14 w-[10rem] rounded-[30px] text-white text-2xl space-x-2">
+                    <p>Score</p>
+                    <img src="./images/monetization_on.png" alt="">
+                    <span class="text-red-500 font-bold text-3xl">0</span>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- ====================section 03 =============== -->
+        <section id="final-score" class="hidden flex items-center justify-center h-screen">
+            <div class="final-score-background final-score-background-border p-12 rounded-2xl flex flex-col items-center justify-center">
+                <h3 class="text-white font-bold text-6xl">Score : <span class="text-green-500">22</span></h3>
+
+                <button class="mt-16 h-14 w-36 bg-white rounded-2xl hover:bg-cyan-400 text-zinc-950 text-xl font-bold ">Play Now</button>
+
+                <p class="text-white md:text-xl poppins mt-10">Practice will make you better</p>
+            </div>
+
+        </section>
+    </main>
+
+
+    <script src="./js/type.js"></script>
 </body>
+
 </html>
