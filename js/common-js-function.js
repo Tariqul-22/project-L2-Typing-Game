@@ -55,6 +55,7 @@ function handleKeyPress(event) {
     }
 
     if (playerPressed === 'Escape') {
+        setAttributeByIdClass('home','hidden');
         finalScore(score);
     }
 }
