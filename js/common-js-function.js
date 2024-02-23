@@ -26,8 +26,7 @@ function randomAlphabet() {
 }
 
 function handleKeyPress(event) {
-    const playerPressed = event.key;
-    console.log(playerPressed);
+    let playerPressed = event.key;
     const currentAlphabet = document.getElementById('currentAlphabet');
     const expectedAlphabet = currentAlphabet.innerText.toLowerCase();
     console.log(playerPressed,expectedAlphabet);
@@ -35,6 +34,13 @@ function handleKeyPress(event) {
     if (playerPressed === expectedAlphabet) {
         continueGame();
         removeAttributeByIdClass (playerPressed,'bg-orange-400');
+        score = score + 1;
+        setInnerText('score',score);
+
+    }
+    else if (playerPressed.toLowerCase() === expectedAlphabet) {
+        continueGame();
+        removeAttributeByIdClass (playerPressed.toLowerCase(),'bg-orange-400');
         score = score + 1;
         setInnerText('score',score);
 
