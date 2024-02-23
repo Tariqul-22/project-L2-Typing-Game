@@ -27,6 +27,7 @@ function randomAlphabet() {
 
 function handleKeyPress(event) {
     const playerPressed = event.key;
+    console.log(playerPressed);
     const currentAlphabet = document.getElementById('currentAlphabet');
     const expectedAlphabet = currentAlphabet.innerText.toLowerCase();
     console.log(playerPressed,expectedAlphabet);
@@ -46,6 +47,10 @@ function handleKeyPress(event) {
 
         }
     }
+
+    if (playerPressed === 'Escape') {
+        finalScore(score);
+    }
 }
 
 function finalScore(score) {
@@ -59,10 +64,8 @@ function finalScore(score) {
 function playAgain(event) {
     setAttributeByIdClass('score-board','hidden');
     removeAttributeByIdClass ('play-ground','hidden');
-    life = 10;
-    score = 0;
-    setInnerText('life',life);
-    setInnerText('score',score);
+    setInnerText('life',10);
+    setInnerText('score',0);
     const currentElement = document.getElementById('currentAlphabet');
     const element = currentElement.innerText
     removeAttributeByIdClass(element,'bg-orange-400');
