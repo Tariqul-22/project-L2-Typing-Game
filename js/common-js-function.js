@@ -71,8 +71,10 @@ function finalScore(score) {
 function playAgain(event) {
     setAttributeByIdClass('score-board','hidden');
     removeAttributeByIdClass ('play-ground','hidden');
-    setInnerText('life',10);
-    setInnerText('score',0);
+    life = 10;
+    setInnerText('life',life);
+    score = 0;
+    setInnerText('score',score);
     const currentElement = document.getElementById('currentAlphabet');
     const element = currentElement.innerText
     removeAttributeByIdClass(element,'bg-orange-400');
